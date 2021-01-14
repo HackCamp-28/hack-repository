@@ -1,0 +1,160 @@
+body {
+    position: relative;
+text-background: #FFFFFF;
+font-family: Chivo;
+headings: #540087;
+text-color: #A39880;
+    background-color: #EFE5CF;
+}
+
+.downloadBtn {
+    width: 220px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 5px;
+    padding: 16px 9px;
+    background-color: #540087;
+    color: white;
+}
+
+.downloadBtn:hover {
+    background-color: #540087;
+}
+
+.downloadBtn p {
+    line-height: 20px;
+}
+
+.store {
+    font-size: 26px;
+}
+
+.appLogo {
+    font-size: 45px;
+    padding-left: 12px;
+    padding-right: 2px;
+}
+
+.social {
+    list-style-type:none;
+    font-size: 160%;
+    padding-left: 0;
+}
+
+.social li {
+    display: inline;
+}
+
+#mainHeader {
+    background-image: url('https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/120128683_106434674551633_1157821571984334092_o.jpg?_nc_cat=109&ccb=2&_nc_sid=6e5ad9&_nc_ohc=0ePexVhbSjUAX_hJeLV&_nc_ht=scontent-lhr8-1.xx&oh=33f0515996533a02495e51a77462404d&oe=60255A74');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+height: 400px;
+    
+}
+
+#logoBrand {
+    font-size: 1.6em;
+    color: rgb(255, 255, 255);
+}
+
+#navbarSupportedContent ul li a:hover {
+    color: rgb(163, 152, 128);
+}
+
+#navbarSupportedContent form input {
+    height: 1.7rem;
+}
+
+#navbarSupportedContent form button {
+    border-color: rgb(163, 152, 128);
+    color: rgb(163, 152, 128);
+}
+
+#navbarSupportedContent form button:hover {
+    background-color: #A39880;
+    border-color: white;
+    color: white;
+}
+
+
+#mainHeader {
+    color: white;
+    text-shadow: 2px 1px black;
+}
+
+#mainHeader .input-group-text {
+    text-shadow: none;
+}
+
+#mainHeader hr {
+    border-color: white;
+    width: 50%;
+}
+
+
+#mainHeader button {
+    background-color: #540087;
+    border-color: white;
+    color: white;
+}
+
+#mainHeader button:hover {
+    background-color:#A39880;
+    border-color: white;
+    color: white;
+}
+
+#about h5 {
+    font-size: 1.5em;
+    color: #540087;
+}
+
+#about span {
+    font-size: 170%;
+}
+
+#about .card {
+    border-color: rgba(0, 153, 140, .4);
+}
+
+#contact {
+    background-color: #EFE5CF;
+    color: #A39880;
+    padding: 3em;
+    /*color: rgba(255,255,255,.5);*/
+}
+
+#contact h5 {
+    color: #540087;
+}
+
+#contact a {
+    /*color: rgba(255,255,255,.5);*/
+    color: #A39880;
+    /* text-decoration: none; */
+}
+
+#contact a:hover {
+    color: #EFE5CF;
+}
+
+#contact hr {
+    border-color: rgba(255,255,255,.1);
+    width: 90%;
+}
+
+.navbar {
+background-color: #540087;
+}
+
+#navbarSupportedContent form button {
+    border-color: #EFE5CF;
+    color: rgb(239, 229, 207);
+}
+
+/*.jumbotron {*/
+/*    background-color: #EFE5CF;*/
+/*}*/
