@@ -1,7 +1,7 @@
 body {
     position: relative;
 text-background: #FFFFFF;
-font-family: Chivo;
+font-family: "Chivo", sans-serif;
 headings: #540087;
 text-color: #A39880;
     background-color: #EFE5CF;
@@ -133,12 +133,12 @@ height: 400px;
 
 #contact a {
     /*color: rgba(255,255,255,.5);*/
-    color: #540087;
+    color: #A39880;
     /* text-decoration: none; */
 }
 
 #contact a:hover {
-    color: #EFE5CF;
+    color: #540087;
 }
 
 #contact hr {
@@ -155,13 +155,15 @@ background-color: #540087;
     color: rgb(239, 229, 207);
 }
 
-.loginContainer {
-    margin-top: 50px;
-    background-color: white;
-    padding: 3%;
-    text-align: center;
+.jumbotron {
+    background-color: #D8BFD8;
 }
 
-/*.jumbotron {*/
-/*    background-color: #EFE5CF;*/
-/*}*/
+.form-inline {
+    padding-right: 50px;
+}
+
+#navbarSupportedContent form button {
+    padding-right: 50px;
+    margin-right: 50px;
+}
