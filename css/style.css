@@ -42,6 +42,13 @@ text-color: #A39880;
     padding-left: 0;
 }
 
+.loginContainer {
+    margin-top: 50px;
+    background-color: white;
+    padding: 3%;
+    text-align: center;
+}
+
 .social li {
     display: inline;
 }
