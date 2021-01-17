@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="get30sec">
+    <link rel="icon" href="logo.jpg" sizes="32x32" />
     <meta name="keywords" content="get30sec, pitch, hire">
 
     <!-- Bootstrap CSS -->
@@ -26,11 +27,12 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <!-- brand -->
-            <a class="navbar-brand" href="index.html" id="logoBrand"><span><i class="fab fa-buromobelexperte"></i></span> get30sec</a>
+<!--            <a class="navbar-brand" href="index.html" id="logoBrand"><span><i class="fas fa-stopwatch"></i></span> get30sec</a>-->
+            <a href="index.html"> <img src="get_30_second_logo.svg" class="navbar-brand" id="logoBrand" alt="pitch deck"></a>
             <!-- toggler button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
 
 
         </div>
@@ -43,20 +45,33 @@
 
 <!--defining the login form-->
 
-<div class="loginContainer">
-    <form action="" method="post">
-        <h2>Login to get30sec</h2>
-        <hr class="my-4">
-        <p><label>
-            <input class="logininput" type="text" placeholder="Username" name="username">
-        </label></p>
-        <p><label>
-            <input class="logininput" type="password" placeholder="Password" name="password">
-        </label></p>
-        <p><button type="submit" class="loginButton"><i class="loginForm">Login</i></button></p>
+<!--<div class="loginContainer">-->
+<!--    <form action="" method="post" class="form1">-->
+<!--        <h2>Login to get30sec</h2>-->
+<!--        <hr class="my-4">-->
+<!--        <p><label>-->
+<!--            <input class="logininput" type="text" placeholder="Username" name="username">-->
+<!--        </label></p>-->
+<!--        <p><label>-->
+<!--            <input class="pass" type="password" placeholder="Password" name="password">-->
+<!--        </label></p>-->
+<!--        <p><button type="submit" class="loginButton"><i class="loginForm">Login</i></button></p>-->
+<!--        <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>-->
 
+
+<!--    </form>-->
+<!--</div>-->
+
+<div class="main" >
+    <p class="sign" align="center">Login</p>
+    <form class="form1" action="login.php">
+        <input class="un" type="text" align="center" placeholder="Username">
+        <input class="pass" type="password" align="center" placeholder="Password">
+        <a class="submit" align="center">Sign in</a>
+        <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>
     </form>
 </div>
+
 
 <!-- footer -->
 <footer id="contact">
@@ -74,10 +89,10 @@
                 <h5>Follow us</h5>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
                 <ul class="social">
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.facebook.com/get30sec/?ref=py_c"><i class="fab fa-facebook-square"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/get30sec/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/get30sec"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>

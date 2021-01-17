@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="get30sec">
+      <link rel="icon" href="logo.jpg" sizes="32x32" />
       <meta name="keywords" content="get30sec, pitch, hire">
 
     <!-- Bootstrap CSS -->
@@ -26,7 +27,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <!-- brand -->
-                    <a class="navbar-brand" href="#mainNav" id="logoBrand"><span><i class="fab fa-buromobelexperte"></i></span> get30sec</a>
+<!--                    <a class="navbar-brand" href="index.html" id="logoBrand"><span><i class="fas fa-stopwatch"></i></span> get30sec</a>-->
+                <a href="index.html"> <img src="get_30_second_logo.svg" class="navbar-brand" id="logoBrand" alt="pitch deck"></a>
                 <!-- toggler button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -52,12 +54,26 @@
                     <!-- /menu -->
 
                     <!-- login -->
-                    <form class="form-inline my-2 my-lg-0 pt-2" action="login.html">
-                        <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Login</button>
+                    <ul class="navbar-nav">
+                    <?php if(isset($_SESSION["login"])): ?>
+                    <li class="nav-item ">
+                        <form class="form-inline my-2 my-lg-0 pt-2" action="signOut.php">
+                            <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Sign Out <span><i class="fa fa-user"></i></span></button>
+                        </form>
+                    </li>
+                        <?php else : ?>
+                        <li class="nav-item ">
+                        <form class="form-inline my-2 my-lg-0 pt-2" action="login.html">
+                        <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Login <span><i class="fas fa-sign-in-alt"></i></span></button>
                     </form>
+                        </li>
+                        <li class="nav-item ">
                     <form class="form-inline my-2 my-lg-0 pt-2" action="signup.html">
-                    <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Sign Up <span><i class="fas fa-user-plus"></i></span></button>
                     </form>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
                     <!-- /login -->
                 </div>
                 <!-- /collapse -->
@@ -105,16 +121,17 @@ power pitch without storing your data on a platform.</p>
         <!-- about -->
             <!-- title -->
             <div class="pb-5">
-                <h3 class="display-4">Why this App is so awsome</h3>
-                <p>This is why this app is so awsome, you'll never need another one!</p>
+                <h3 class="display-4">Ready to pitch yourself, your idea, project or company?</h3>
+                <p>Wait no longer! You can now easily create your pitch and share it with others without
+                    being stuck to a platform.</p>
             </div>
             <!-- cards -->
             <div class="row justify-content-center">
                 <!-- card 1 -->
                 <div class="col-lg-4">
                         <div class="card" >
-                                <img src="https://get30sec.com/wp-content/uploads/2020/12/step1-1.png" class="card-img-top" alt="...">
-                                <div class="card-body">
+                            <img src="step1-2.jpg" class="card-img-top" alt="pitch deck">
+                            <div class="card-body">
                                   <h5 class="card-title"><span><i class="fas fa-mobile"></i></span><br>1. Create your pitch deck</h5>
                                   <p class="card-text">Select one of the predefined subjects to pitch your idea, your product, your company or yourself. Or make up your own pitch deck. It's that easy.</p>
                                 </div>
@@ -123,8 +140,9 @@ power pitch without storing your data on a platform.</p>
                 <!-- card 2 -->
                 <div class="col-lg-4">
                     <div class="card" >
-                                <img src="https://get30sec.com/wp-content/uploads/2020/11/step2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
+<!--                                <img src="https://get30sec.com/wp-content/uploads/2020/11/step2.png" class="card-img-top" alt="...">-->
+                        <img src="step2.png" class="card-img-top image-size" alt="Create and style video">
+                        <div class="card-body">
                                   <h5 class="card-title"><span><i class="fas fa-mobile-alt"></i></span><br>2. Create and style your video</h5>
                                   <p class="card-text">Cover the subjects in your pitch deck within 30 seconds. Add some filters, text or images to make it all yours. The videos get automatically combined in one power pitch.</p>
                                 </div>
@@ -133,8 +151,9 @@ power pitch without storing your data on a platform.</p>
                 <!-- card 3 -->
                 <div class="col-lg-4">
                     <div class="card" >
-                                <img src="https://get30sec.com/wp-content/uploads/2020/12/blow-away-1-768x432.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
+                        <img src="step1-1.png" class="card-img-top" alt="pitch deck">
+                        <img src="https://get30sec.com/wp-content/uploads/2020/12/blow-away-1-768x432.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
                                   <h5 class="card-title"><span><i class="fas fa-sms"></i></span><br>3. Share your pitch, blow them away!</h5>
                                 </div>
                               </div>
@@ -153,12 +172,12 @@ power pitch without storing your data on a platform.</p>
             <div class="jumbotron jumbotron-fluid mb-0">
                 <div class="container text-center">
                     <h4 class="display-4">Get the App</h4>
-                    <p class="lead">Download get30sec for iPhone or Android</p>
+                    <p class="lead">Download get30sec for free on iOS or Android</p>
                 </div>
 
                 <div class="container">
                     <div class="row justify-content-center">
-                        <!-- ipod -->
+                        <!-- ios -->
                         <form action="https://apps.apple.com/us/app/get30sec/id1519431305">
                             <button class="downloadBtn">
                                 <div class="row">
@@ -212,10 +231,10 @@ power pitch without storing your data on a platform.</p>
                     <h5>Follow us</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
                     <ul class="social">
-                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.facebook.com/get30sec/?ref=py_c"><i class="fab fa-facebook-square"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/get30sec/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/get30sec"><i class="fab fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
