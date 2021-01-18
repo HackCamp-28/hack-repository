@@ -7,7 +7,7 @@ class Database {
     public static function getInstance() {
         //database details
        $username ='hc21-28';
-       $password = 'iv4Jookaep3i';
+       $password = 'SFquXB65IC6wgj7';
        $host = "hc21-28.poseidon.salford.ac.uk";
        $dbName = 'hc21-28';
        
