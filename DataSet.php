@@ -1,6 +1,7 @@
 <?php
 //class for handling operations on all 3 databases
 require_once ('Database.php');
+require_once ('UserData.php');
 
 class DataSet{
     protected $_dbHandle, $_dbInstance;
@@ -9,7 +10,7 @@ class DataSet{
         $this->_dbInstance = Database::getInstance();
         $this->_dbHandle = $this->_dbInstance->getdbConnection();
     }
-    
+
 
     public function verifyUserCredentials($username, $password){ //checks the database for an account with the matching username and password given
         $sqlQuery = "SELECT * FROM Users WHERE username = ? AND password = ?;";
@@ -33,4 +34,17 @@ class DataSet{
 
         }
 
-}}
+
+
+}
+    public function getUserWithEmail($email){ //returns a user's details when given that user's email.
+        $sqlQuery = "SELECT * FROM Users WHERE Email = ?";
+        $statement = $this->_dbHandle->prepare($sqlQuery);
+        $statement->execute([$email]);
+
+        $a = $statement->fetch();
+        return $a ;
+
+    }
+
+}
