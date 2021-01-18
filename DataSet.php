@@ -38,7 +38,7 @@ class DataSet{
 
 }
     public function getUserWithEmail($email){ //returns a user's details when given that user's email.
-        $sqlQuery = "SELECT * FROM Users WHERE Email = ?";
+        $sqlQuery = "SELECT * FROM Users WHERE email = ?";
         $statement = $this->_dbHandle->prepare($sqlQuery);
         $statement->execute([$email]);
 
