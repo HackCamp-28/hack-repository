@@ -46,5 +46,17 @@ class DataSet{
         return $a ;
 
     }
+    public function addUser($password, $firstName, $lastName, $email){ //used for registering a user, adds a user to the user database
 
+        $getidsql = "SELECT MAX(userID) FROM Users"; //gets the biggest userid
+        $maxid = $this->_dbHandle->prepare($getidsql); // prepare a PDO statement
+        $maxid->execute(); // execute the PDO statement
+        $a = $maxid->fetch();
+        $id = $a[0] +1; //adds one to the biggest userid to create the new userid
+
+        $sqlQuery= "INSERT INTO Users VALUES(?,?,?,?,?) ;";
+        $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
+        $statement->execute($id, hash("md5", $password), $firstName, $lastName, $email); // execute the PDO statement
+
+    }
 }
