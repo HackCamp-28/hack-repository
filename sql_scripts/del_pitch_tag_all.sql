@@ -1,0 +1,6 @@
+/*
+Deletes all Tag under a pitchID.
+WORKBENCH: REQUIRES SAFE MODE DISABLING TO RUN
+*/
+DELETE FROM Tags
+WHERE pitchID = 9;
