@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="get30sec">
+      <link rel="icon" href="logo.jpg" sizes="32x32" />
+      <meta name="keywords" content="get30sec, pitch, hire">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>get30sec</title>
+  </head>
+
+  <body data-spy="scroll" data-offset="150" data-target="#mainNav">
+
+    <!-- header -->
+    <header id="home">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- brand -->
+<!--                    <a class="navbar-brand" href="index.html" id="logoBrand"><span><i class="fas fa-stopwatch"></i></span> get30sec</a>-->
+                <a href="index.html"> <img src="get_30_second_logo.svg" class="navbar-brand" id="logoBrand" alt="pitch deck"></a>
+                <!-- toggler button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                <!-- collapse -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- menu -->
+                    <ul class="navbar-nav mr-auto pt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#download">Download App</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- /menu -->
+
+                    <!-- login -->
+                    <ul class="navbar-nav">
+                    <?php if(isset($_SESSION["login"])): ?>
+                    <li class="nav-item ">
+                        <form class="form-inline my-2 my-lg-0 pt-2" action="signOut.php">
+                            <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Sign Out <span><i class="fa fa-user"></i></span></button>
+                        </form>
+                    </li>
+                        <?php else : ?>
+                        <li class="nav-item ">
+                        <form class="form-inline my-2 my-lg-0 pt-2" action="login.html">
+                        <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Login <span><i class="fas fa-sign-in-alt"></i></span></button>
+                    </form>
+                        </li>
+                        <li class="nav-item ">
+                    <form class="form-inline my-2 my-lg-0 pt-2" action="signup.html">
+                    <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Sign Up <span><i class="fas fa-user-plus"></i></span></button>
+                    </form>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
+                    <!-- /login -->
+                </div>
+                <!-- /collapse -->
+            </div>
+        </nav>
+        <!-- /navbar -->
+
+    </header>
+    <!-- /header -->
+
+
+<!-- main -->
+    <section id="email" class="p-5 mt-5">
+
+        <div class="container text-center">
+
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <form>
+                        <div class="form-group">
+                            <h3>Email address</h3>
+                            <p class="form-text text-muted">Update your email address:</p>
+                            <input type="email" class="form-control" id="updateEmail" aria-describedby="emailHelp" placeholder="New Email">
+                            <input type="checkbox" class="form-check-input mt-1" id="mailingCheck">
+                            <label class="form-check-label mt-1" for="mailingCheck">Subscribe me to email updates!</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-4">Update Email</button>
+                        <div class="form-group">
+                            <h3>Personal Details</h3>
+                            <p class="form-text text-muted">Update your personal information:</p>
+                            <input type="password" class="form-control" id="newFirstName" placeholder="First name">
+                            <input type="password" class="form-control" id="newSecondName" placeholder="Second name">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-4">Update Name</button>
+                        <div class="form-group">
+                            <h3>Password</h3>
+                            <p class="form-text text-muted">Update your password:</p>
+                            <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-4">Update Password</button>
+                    </form>
+
+                    <form>
+                    <div class="form-group">
+                        <h3>Uploads</h3>
+                        <p class="form-text text-muted text-left">
+                            This will delete all video links attached to your account.
+                            Videos will still exist on the file host(s) you uploaded them to, but will no longer be
+                            linked to get30sec.</p>
+                        <p><strong>This process cannot be reversed.</strong></p>
+                        <button type="submit" class="btn btn-outline-danger mb-4">Delete Video Links</button>
+                    </div>
+                    </form>
+
+                    <form>
+                        <div class="form-group">
+                            <h3>Account</h3>
+                            <p class="form-text text-muted text-left">
+                                This will delete your account and all related data.
+                                Videos will still exist on the file host(s) you uploaded them to, but will no longer be
+                                linked to get30sec.
+                            <p><strong>This process cannot be reversed.</strong></p>
+                            <button type="submit" class="btn btn-outline-danger mb-4">Delete My Account</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm"></div>
+            </div>
+        </div>
+    </section>
+<!-- /main -->
+
+
+<!-- download -->
+    <section id="download">
+            <div class="jumbotron jumbotron-fluid mb-0">
+                <div class="container text-center">
+                    <h4 class="display-4">Get the App</h4>
+                    <p class="lead">Download get30sec for free on iOS or Android</p>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <!-- ios -->
+                        <form action="https://apps.apple.com/us/app/get30sec/id1519431305">
+                            <button class="downloadBtn">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="appLogo"><i class="fab fa-apple"></i></p>
+                                    </div>
+                                    <div class="col-9">
+                                        <p>Available on the<br>
+                                        <span class="store">App Store</span></p>
+                                    </div>
+                                </div>
+                            </button>
+                        </form>
+                        <!-- android -->
+                        <form action="https://play.google.com/store/apps/details?id=com.getthirtyseconds">
+                            <button class="downloadBtn">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="appLogo"><i class="fab fa-google-play"></i></p>
+                                    </div>
+                                    <div class="col-9">
+                                        <p>Download from<br>
+                                        <span class="store">Google Play</span></p>
+                                    </div>
+                                </div>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
+                
+
+            </div>
+    </section>
+<!-- /download -->
+
+<!-- footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pr-3 pl-3">
+                    <h5>Contact Us</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat molestiae numquam illum esse reiciendis cupiditate hic rerum, et unde. Voluptates rerum explicabo deleniti eos hic incidunt saepe tempore repellat dicta!</p>
+                </div>
+                <div class="col-sm-4 pr-3 pl-3">
+                    <h5>Privacy Settings</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat molestiae numquam illum esse reiciendis cupiditate hic rerum, et unde. Voluptates rerum explicabo deleniti eos hic incidunt saepe tempore repellat dicta!</p>
+                </div>
+                <div class="col-sm-4 pr-3 pl-3">
+                    <h5>Follow us</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/get30sec/?ref=py_c"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="https://www.instagram.com/get30sec/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/get30sec"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="container text-center">
+                <p class="small">©2021, No rights reserved</p>
+            </div>
+        </div>
+    </footer>
+<!-- /footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+<script>
+$('body').scrollspy({ target: '#mainNav' })
+</script>
